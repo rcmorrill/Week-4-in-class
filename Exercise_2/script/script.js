@@ -6,13 +6,25 @@ console.log("Width: ", width, "Height: ", height);
 
 //Next, let's draw a <svg> element under .canvas <div>
 //<svg> needs two attributes at least: width and height
-d3.select('.canvas')
+
+
+
+
+var plot = d3.select('.canvas')
     .append('svg')
     .attr('width',width) //note .attr()
-    .attr('height',height)
+    .attr('height',height);
+    
+plot
     .append('circle')
     .attr('cx',100)
     .attr('cy',100)
     .attr('r',50);
-
 //Let's draw another circle
+
+plot
+	.append('circle')
+	.attr('cx', 200)
+	.attr('cy', 300)
+	.attr('r',60);
+
